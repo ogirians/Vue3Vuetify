@@ -2,6 +2,7 @@ import { createVuetify} from 'vuetify'
 // import { md3 } from 'vuetify/blueprints'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
+import { VDataTable } from 'vuetify/labs/VDataTable'
 
 const myCustomLightTheme = {
   dark: false,
@@ -26,12 +27,15 @@ export default createVuetify({
       myCustomLightTheme,
     },
   },
-//   blueprint: md3,
+//    blueprint: md3,
   icons: {
     defaultSet: 'mdi',
     aliases,
     sets: {
       mdi,
     },
+  },
+  components: {
+    VDataTable,
   },
 })

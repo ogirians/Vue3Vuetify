@@ -4,8 +4,8 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <v-app>
-    <v-navigation-drawer v-model="drawer">
+  <v-app id="laplap" class="flex-sm-fill" style="position: unset;">
+    <v-navigation-drawer v-model="drawer" class="flex-sm-fill">
       <v-list>
         <v-list-item
           v-for="(item, i) in items"
@@ -31,7 +31,9 @@ import HelloWorld from './components/HelloWorld.vue'
     </v-app-bar>
 
     <v-main>
-       <RouterView />
+      <div class="flex-sm-fill">
+        <RouterView />
+      </div>
     </v-main>
   </v-app>
 </template>
@@ -55,13 +57,26 @@ import HelloWorld from './components/HelloWorld.vue'
     }),
   }
 </script> 
-
 <style>
+
   #app {
     /* max-width: 1280px; */
     margin: 0 auto;
     padding: 0rem;
     font-weight: normal;
   }
+
+  #laplap .v-application__wrap {
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  max-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: unset;
+  }
+
 </style>
+
 
